@@ -1,6 +1,6 @@
-# Daily Tracker
+# Trackeo
 
-A Daily Tracker is a tool that can help you organize and keep track of the tasks that you need to complete in a given day. It is a visual representation of your to-do list, where you can see all your tasks in one place and track your progress as you complete them.
+A Trackeo is a tool that can help you organize and keep track of the tasks that you need to complete in a given day. It is a visual representation of your to-do list, where you can see all your tasks in one place and track your progress as you complete them.
 
 ## Requirements
 `Ruby 3.1.0`
