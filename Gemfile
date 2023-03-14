@@ -18,12 +18,6 @@ gem "puma", "~> 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
-
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "stimulus-rails"
-
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
@@ -78,3 +72,4 @@ gem "rubocop", "~> 1.48", ">= 1.48.1"
 gem "rubocop-performance", "~> 1.16"
 gem "rubocop-rails", "~> 2.18"
 gem "rubocop-rspec", "~> 2.19"
+gem "simple_form", "~> 5.2"

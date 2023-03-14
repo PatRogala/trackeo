@@ -2,6 +2,7 @@
   <div class="task-form">
 
     <%= @task.object_id %>
+    <%= @task.errors.count %>
     <div class="error">
       <ul>
         <% @task.errors.full_messages.each do |msg| %>
@@ -13,24 +14,11 @@
     <%= link_to 'Homepage', tasks_path %>
     <h1> Add a new task </h1>
 
-    <%= form_for @task, local: true do |f| %>
-      <p>
-        <%= f.label :title %> <br>
-        <%= f.text_field :title %>
-      </p>
-
-      <p>
-        <%= f.label :description %> <br>
-        <%= f.text_area :description %>
-      </p>
-
-      <p>
-        <%= f.label :deadline %> <br>
-        <%= f.datetime_field :deadline, min: Date.today %>
-
-      <p>
-        <%= f.submit "Create Task" %>
-      </p>
+    <%= simple_form_for @task, turbo: false do |f| %>
+      <%= f.input :title, required: true %>
+      <%= f.input :description, required: true %>
+      <%= f.datetime_field :deadline, min: Date.today %>
+      <%= f.button :submit %>
     <% end %>
   </div>
 </div>
