@@ -6,7 +6,7 @@ class Task < ApplicationRecord
 
   before_validation :set_default_completed
 
-  scope :for_date, ->(date) { where(deadline: date.beginning_of_day..date.end_of_day) }
+  scope :for_date, ->(date) { where(deadline: date.all_day) }
 
   private
 
