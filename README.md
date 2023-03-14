@@ -21,3 +21,10 @@ A Trackeo is a tool that can help you organize and keep track of the tasks that 
 - To run all tests at once use command `rspec`
 - To check current code coverage `open coverage/index.html`
 - To run rubocop check `rubocop`
+
+
+## Running
+
+You can run this application with `rails s` or `rails server`
+
+Default url: `http://127.0.0.1:3000`
