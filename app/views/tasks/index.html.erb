@@ -1,6 +1,9 @@
-<% @tasks.each do |task| %>
-  <div class="task">
-    <h2><%= task.title %></h2>
-    <p><%= task.description %></p>
-  </div>
-<% end %>
+<div class="tasks">
+  <h1> Tasks for <%= @date %></h1>
+
+  <% if @tasks.empty? %>
+    <p> No tasks for today.</p>
+  <% end %>
+
+  <%= render @tasks %>
+</div>

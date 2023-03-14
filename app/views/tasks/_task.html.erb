@@ -1,0 +1,11 @@
+<div class="task <%= task_class(task) %>">
+  <div>
+    <h2><%= task.title %></h2>
+    <p><%= task.description %></p>
+  </div>
+  <p class="due"><%= get_task_time(task) %></p>
+
+  <div class="actions">
+    <b>Mark as <%= task.completed? ? "undone" : "done"  %></b>
+  </div>
+</div>

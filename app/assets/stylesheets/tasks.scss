@@ -1,0 +1,71 @@
+$black-color: #1D1C1A;
+$white-color: #FAF8F6;
+$green-color: #77DD77;
+$red-color: #FF6961;
+
+.tasks {
+  h1 {
+    font-size: 1.5rem;
+    padding: 30px 0;
+  }
+
+  .task {
+    border: 1px solid $black-color;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 15px 0;
+
+    h2 {
+      font-size: 1.5rem;
+      padding: 5px 0;
+    }
+
+    p {
+      font-size: 0.75rem;
+      font-style: italic;
+    }
+
+    .due {
+      font-size: 1rem;
+      color: $black-color;
+      font-weight: 700;
+    }
+
+    .actions {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      font-style: italic;
+      background-color: $white-color;
+      opacity: 0;
+      letter-spacing: 2px;
+      color: $green-color;
+      border: 1px solid $green-color;
+      cursor: pointer;
+    }
+
+    &:hover {
+      .actions {
+        opacity: 1;
+      }
+    }
+
+    &.task-completed {
+      background-color: $green-color;
+      color: $white-color;
+      text-decoration: line-through;
+
+      .actions {
+        color: $red-color;
+        border: 1px solid $red-color;
+      }
+    }
+  }
+}

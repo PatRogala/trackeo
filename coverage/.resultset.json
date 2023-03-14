@@ -323,6 +323,17 @@
       "/Users/patrogala/Desktop/daily-tracker/app/helpers/tasks_helper.rb": {
         "lines": [
           1,
+          1,
+          3,
+          null,
+          null,
+          1,
+          4,
+          1,
+          null,
+          3,
+          null,
+          null,
           null
         ]
       },
@@ -331,6 +342,27 @@
           1,
           null,
           1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
           null
         ]
       },
@@ -436,6 +468,6 @@
         ]
       }
     },
-    "timestamp": 1678795928
+    "timestamp": 1678799486
   }
 }
