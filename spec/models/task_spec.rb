@@ -14,4 +14,13 @@ RSpec.describe Task, type: :model do
       expect(task.completed).to eq(false)
     end
   end
+
+  describe 'scopes' do
+    describe '::for_date' do
+      it 'returns tasks for given date' do
+        task = Task.create!(title: 'Task 1', description: 'Description 1', deadline: Date.today)
+        expect(Task.for_date(Date.today)).to eq([task])
+      end
+    end
+  end
 end
