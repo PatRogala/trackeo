@@ -4,6 +4,27 @@ $green-color: #77DD77;
 $red-color: #FF6961;
 
 .tasks {
+  .task-nav {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      color: $black-color;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 10px;
+      border: 1px solid $black-color;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $black-color;
+        color: $white-color;
+      }
+    }
+  }
+
   h1 {
     font-size: 1.5rem;
     padding: 30px 0;

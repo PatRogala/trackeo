@@ -1,6 +1,10 @@
 <div class="tasks">
   <h1> Tasks for <%= @date %></h1>
 
+  <div class="task-nav">
+    <%= link_to "← Yesterday", tasks_path(date: @date - 1.day) %>
+    <%= link_to "Tomorrow →", tasks_path(date: @date + 1.day) %>
+  </div>
   <% if @tasks.empty? %>
     <p> No tasks for today.</p>
   <% end %>
