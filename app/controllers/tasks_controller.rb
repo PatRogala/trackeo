@@ -6,4 +6,11 @@ class TasksController < ApplicationController
 
     @tasks = Task.for_date(@date)
   end
+
+  def toggle
+    @task = Task.find(params[:id])
+    @task.toggle!
+
+    redirect_to tasks_path(date: @task.deadline)
+  end
 end

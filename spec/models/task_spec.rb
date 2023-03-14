@@ -23,4 +23,14 @@ RSpec.describe Task do
       end
     end
   end
+
+  describe "Public instance methods" do
+    describe "#toggle!" do
+      it "toggles completed attribute" do
+        task = described_class.create!(title: "Task 1", description: "Description 1", deadline: Time.zone.today)
+        task.toggle!
+        expect(task.completed).to be(true)
+      end
+    end
+  end
 end

@@ -8,6 +8,11 @@ class Task < ApplicationRecord
 
   scope :for_date, ->(date) { where(deadline: date.all_day) }
 
+  def toggle!
+    self.completed = !completed
+    save!
+  end
+
   private
 
   def set_default_completed

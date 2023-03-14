@@ -6,6 +6,9 @@
   <p class="due"><%= get_task_time(task) %></p>
 
   <div class="actions">
-    <b>Mark as <%= task.completed? ? "undone" : "done"  %></b>
+    <%= button_to "Mark as #{task.completed? ? "undone" : "done"}",
+                  toggle_task_path(task),
+                  method: :put,
+                  class: "actions #{task.completed? ? "undone" : "done"}" %>
   </div>
 </div>

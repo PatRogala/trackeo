@@ -18,4 +18,12 @@ RSpec.describe "Tasks" do
       end
     end
   end
+
+  describe "PUT /toggle" do
+    it "toggles completed attribute" do
+      task = Task.create!(title: "Task 1", description: "Description 1", deadline: Time.zone.today)
+      put toggle_task_path(task)
+      expect(task.reload.completed).to be(true)
+    end
+  end
 end
