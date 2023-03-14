@@ -5,6 +5,11 @@
     <%= link_to "← Yesterday", tasks_path(date: @date - 1.day) %>
     <%= link_to "Tomorrow →", tasks_path(date: @date + 1.day) %>
   </div>
+
+  <div class="task-links">
+    <p><%= link_to "Add new task", new_task_path %></p>
+  </div>
+
   <% if @tasks.empty? %>
     <p> No tasks for today.</p>
   <% end %>

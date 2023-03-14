@@ -1,0 +1,36 @@
+<div class="tasks">
+  <div class="task-form">
+    <% if @task.errors.any? %>
+      <div class="error">
+        <ul>
+          <% @task.errors.full_messages.each do |msg| %>
+            <li> <%= msg %> </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= link_to 'Homepage', tasks_path %>
+    <h1> Add a new task </h1>
+
+    <%= form_for @task do |f| %>
+      <p>
+        <%= f.label :title %> <br>
+        <%= f.text_field :title %>
+      </p>
+
+      <p>
+        <%= f.label :description %> <br>
+        <%= f.text_area :description %>
+      </p>
+
+      <p>
+        <%= f.label :deadline %> <br>
+        <%= f.datetime_field :deadline, min: Date.today %>
+
+      <p>
+        <%= f.submit "Create Task" %>
+      </p>
+    <% end %>
+  </div>
+</div>

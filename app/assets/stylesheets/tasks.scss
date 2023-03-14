@@ -4,9 +4,25 @@ $green-color: #77DD77;
 $red-color: #FF6961;
 
 .tasks {
+  .task-form {
+    background-color: $white-color;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .task-links {
+    margin: 10px 0;
+  }
+
   .task-nav {
     display: flex;
     justify-content: space-between;
+    margin: 10px 0;
 
     a {
       color: $black-color;

@@ -16,11 +16,21 @@
  */
 $black-color: #1D1C1A;
 $white-color: #FAF8F6;
+$link-color: #FF5733;
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.flash_item {
+  background-color: $black-color;
+  color: $white-color;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 body {
@@ -30,6 +40,14 @@ body {
   opacity: 1;
   background-size: 30px 30px;
   background-image: repeating-linear-gradient(0deg, #e6e6e6, #e6e6e6 1.5px, #FAF8F6 1.5px, #FAF8F6);
+}
+
+a {
+  color: $link-color;
+
+  &:hover {
+    color: $black-color;
+  }
 }
 
 header {
