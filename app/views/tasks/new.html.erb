@@ -1,19 +1,19 @@
 <div class="tasks">
   <div class="task-form">
-    <% if @task.errors.any? %>
-      <div class="error">
-        <ul>
-          <% @task.errors.full_messages.each do |msg| %>
-            <li> <%= msg %> </li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
+
+    <%= @task.object_id %>
+    <div class="error">
+      <ul>
+        <% @task.errors.full_messages.each do |msg| %>
+          <li class="error-msg"> <%= msg %> </li>
+        <% end %>
+      </ul>
+    </div>
 
     <%= link_to 'Homepage', tasks_path %>
     <h1> Add a new task </h1>
 
-    <%= form_for @task do |f| %>
+    <%= form_for @task, local: true do |f| %>
       <p>
         <%= f.label :title %> <br>
         <%= f.text_field :title %>

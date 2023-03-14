@@ -33,6 +33,18 @@ $link-color: #FF5733;
   font-weight: 700;
 }
 
+.error ul {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.error-msg {
+  color: $white-color;
+  background-color: #FF5733;
+  margin: 2px 0;
+  padding: 4px;
+}
+
 body {
   background-color: #f5f5f5;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
