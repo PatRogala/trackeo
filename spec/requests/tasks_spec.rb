@@ -26,4 +26,23 @@ RSpec.describe "Tasks" do
       expect(task.reload.completed).to be(true)
     end
   end
+
+  describe "POST /create" do
+    it "creates a new task" do
+      post tasks_path, params: { task: { title: "Task 1", description: "Description 1", deadline: Time.zone.today } }
+      expect(Task.count).to eq(1)
+    end
+
+    it "renders new template when task is invalid" do
+      post tasks_path, params: { task: { title: "", description: "Description 1", deadline: Time.zone.today } }
+      expect(response).to render_template(:new)
+    end
+  end
+
+  describe "GET /new" do
+    it "renders new template" do
+      get new_task_path
+      expect(response).to render_template(:new)
+    end
+  end
 end
