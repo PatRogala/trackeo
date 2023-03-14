@@ -6,6 +6,7 @@ class Task < ApplicationRecord
 
   before_validation :set_default_completed
 
+  default_scope { order(deadline: :asc) }
   scope :for_date, ->(date) { where(deadline: date.all_day) }
 
   def toggle!

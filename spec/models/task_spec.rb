@@ -22,6 +22,15 @@ RSpec.describe Task do
         expect(described_class.for_date(Time.zone.today)).to eq([task])
       end
     end
+
+    describe "default scope" do
+      it "orders tasks by deadline" do
+        task2 = described_class.create!(title: "Task 1", description: "Description 1", deadline: Time.zone.today)
+        task1 = described_class.create!(title: "Task 2", description: "Description 2",
+                                        deadline: Time.zone.today + 1.day)
+        expect(described_class.all).to eq([task2, task1])
+      end
+    end
   end
 
   describe "Public instance methods" do
