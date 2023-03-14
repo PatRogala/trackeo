@@ -2,6 +2,10 @@
 
 A Trackeo is a tool that can help you organize and keep track of the tasks that you need to complete in a given day. It is a visual representation of your to-do list, where you can see all your tasks in one place and track your progress as you complete them.
 
+<p align="center">
+  <img src="preview.png" />
+</p>
+
 ## Requirements
 `Ruby 3.1.0`
 
@@ -13,10 +17,7 @@ A Trackeo is a tool that can help you organize and keep track of the tasks that 
 
 ## Tests
 
-Tests framework used for this app is `rspec`
-
-To run all tests at once use command `rspec`
-
-To check current code coverage `open coverage/index.html`
-
-To run rubocop check `rubocop`
+- Tests framework used for this app is `rspec`
+- To run all tests at once use command `rspec`
+- To check current code coverage `open coverage/index.html`
+- To run rubocop check `rubocop`
