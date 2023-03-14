@@ -6,6 +6,8 @@ A Trackeo is a tool that can help you organize and keep track of the tasks that 
   <img src="preview.png" />
 </p>
 
+### [Video demo](https://www.youtube.com/watch?v=pKVRD0kWtTA)
+
 ## Requirements
 `Ruby 3.1.0`
 
