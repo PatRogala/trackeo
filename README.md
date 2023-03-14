@@ -1,24 +1,22 @@
-# README
+# Daily Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Daily Tracker is a tool that can help you organize and keep track of the tasks that you need to complete in a given day. It is a visual representation of your to-do list, where you can see all your tasks in one place and track your progress as you complete them.
 
-Things you may want to cover:
+## Requirements
+`Ruby 3.1.0`
 
-* Ruby version
+## Instalation
+- Clone this repo
+- Install dependecies `bundle install`
+- Create database `rails db:create`
+- Migrate database `rails db:migrate`
 
-* System dependencies
+## Tests
 
-* Configuration
+Tests framework used for this app is `rspec`
 
-* Database creation
+To run all tests at once use command `rspec`
 
-* Database initialization
+To check current code coverage `open coverage/index.html`
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To run rubocop check `rubocop`
